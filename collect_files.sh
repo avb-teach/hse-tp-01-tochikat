@@ -13,4 +13,4 @@ shift
 done
 
 RESULT=$(python3 script.py $INPUT $OUTPUT $MAX_DEPTH 2>&1)
-# echo -e $RESULT
+echo -e $RESULT
