@@ -14,6 +14,5 @@ for root, dirs, files in os.walk(INPUT):
         if not os.path.isdir(f'{OUTPUT}/{sb}'):
             os.system(f"mkdir {OUTPUT}/{sb}")
     for file in files:
-        print("/".join(path[max(0, len(path) - MAX_DEPTH):]))
         os.system(f"cp {INPUT}/{"/".join(path)}/{file} {OUTPUT}/{"/".join(path[max(0, len(path) - MAX_DEPTH):])}/")
 
