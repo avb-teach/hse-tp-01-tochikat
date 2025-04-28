@@ -9,9 +9,9 @@ for root, dirs, files in os.walk(INPUT):
     path = root.split(os.sep)
     cp = "/".join(path[1:])
     for file in files:
-        if len(path) - 1 <= MAX_DEPTH:
-            if not os.path.isdir(f'{OUTPUT}/{cp}'):
-                os.system(f"mkdir {OUTPUT}/{cp}")
-            os.system(f"cp {INPUT}/{cp}/{file} {OUTPUT}/{cp}/")
-        else:
+        # if len(path) - 1 <= MAX_DEPTH:
+        #     if not os.path.isdir(f'{OUTPUT}/{cp}'):
+        #         os.system(f"mkdir {OUTPUT}/{cp}")
+        #     os.system(f"cp {INPUT}/{cp}/{file} {OUTPUT}/{cp}/")
+        # else:
             os.system(f"cp {INPUT}/{cp}/{file} {OUTPUT}/")
