@@ -2,7 +2,7 @@
 
 INPUT=$1
 OUTPUT=$2
-MAX_DEPTH=0
+MAX_DEPTH=1
 
 while [ -n "$1" ]
 do
@@ -13,4 +13,4 @@ shift
 done
 
 RESULT=$(python3 script.py $INPUT $OUTPUT $MAX_DEPTH 2>&1)
-#echo -e $RESULT
+echo -e $RESULT
